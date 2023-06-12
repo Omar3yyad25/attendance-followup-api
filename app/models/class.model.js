@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 module.exports = (sequelize, Sequelize) => {
-    const class =  sequelize.define("class",{
+    const classes =  sequelize.define("class",{
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -19,5 +19,5 @@ module.exports = (sequelize, Sequelize) => {
         }
     });
 
-    return class;
+    return classes;
 };

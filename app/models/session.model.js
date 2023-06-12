@@ -4,6 +4,7 @@ module.exports = (sequelize, Sequelize) => {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            primaryKey: true,
         },
         date: {
             type: DataTypes.DATE,

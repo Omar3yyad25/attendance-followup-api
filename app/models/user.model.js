@@ -6,7 +6,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       email: {
         type: Sequelize.STRING,
-        allowNull: flase,
+        allowNull: false,
       },
       password: {
         type: Sequelize.STRING,
