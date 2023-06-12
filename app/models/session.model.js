@@ -6,6 +6,10 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false,
             primaryKey: true,
         },
+        sessionCode:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         date: {
             type: DataTypes.DATE,
             allowNull: false,
