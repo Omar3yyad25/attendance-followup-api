@@ -14,6 +14,8 @@ module.exports = function(app) {
 
   app.post("/retriveallsessions", sessionController.retriveAll);
 
+  app.post("/confirmattendance", sessionController.confirmAttendance);
+
   
 };
 
