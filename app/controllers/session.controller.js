@@ -39,6 +39,7 @@ exports.confirmAttendance = async (req, res) => {
     else{
       session.update({
         Attended: "YES",
+        totalAttended: session.totalAttended + 1,
       });
       return res.redirect('http://34.29.19.112/pages/student-dashboard.html');
     }

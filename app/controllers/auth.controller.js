@@ -50,7 +50,9 @@ exports.signin = async (req, res) => {
     });
 
     if (!user) {
-      return res.status(404).send({ message: "User Not found." });
+      return res.redirect("http://34.29.19.112/pages/sign-in.html");
+
+      //return res.status(404).send({ message: "User Not found." });
     }
     console.log('dgd')
     const passwordIsValid = bcrypt.compareSync(
@@ -59,7 +61,7 @@ exports.signin = async (req, res) => {
     );
 
     if (!passwordIsValid) {
-      return res.message = "Invalid Password!";
+      return res.redirect("http://34.29.19.112/pages/sign-in.html");
       //   message: "Invalid Password!",
       // });
     }
