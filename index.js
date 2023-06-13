@@ -37,7 +37,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // allow cross origin
 app.use(function(req, res, next) {
   const origin = req.headers.origin
-  if(["http://estanfa3.com:8443/", "https://estanfa3.com", "https://estanfa3.com/", "http://estanfa3.com","http://estanfa3.com/","http://127.0.0.1:3000", "http://34.29.19.112/"].indexOf(origin) > -1){
+  if(["http://estanfa3.com:8443/", "https://estanfa3.com", "https://estanfa3.com/", "http://estanfa3.com","http://estanfa3.com/","http://127.0.0.1:3000", "http://34.29.19.112/", "http://34.29.19.112:8443/"].indexOf(origin) > -1){
     res.header('Access-Control-Allow-Origin', origin);
     res.header('Access-Control-Allow-Credentials', true)
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
