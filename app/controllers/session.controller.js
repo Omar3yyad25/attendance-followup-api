@@ -38,7 +38,7 @@ exports.confirmAttendance = async (req, res) => {
     }
     else{
       session.update({
-        status: "true",
+        Attended: "true",
       });
       res.status(200).send(session);
     }
