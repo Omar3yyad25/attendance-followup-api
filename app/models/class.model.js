@@ -4,6 +4,7 @@ module.exports = (sequelize, Sequelize) => {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            primaryKey: true,
         },
         numberofstudents: {
             type: DataTypes.INTEGER,

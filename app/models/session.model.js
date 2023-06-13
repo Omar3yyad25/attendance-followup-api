@@ -21,6 +21,10 @@ module.exports = (sequelize, Sequelize) => {
         Attended: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        totalAttended: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
         }
     });
 

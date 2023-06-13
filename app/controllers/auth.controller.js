@@ -59,8 +59,7 @@ exports.signin = async (req, res) => {
     );
 
     if (!passwordIsValid) {
-      return res.redirect("http://34.29.19.112/pages/dashboard.html");
-      // return res.status(401).send({
+      return res.message = "Invalid Password!";
       //   message: "Invalid Password!",
       // });
     }
@@ -73,7 +72,13 @@ exports.signin = async (req, res) => {
   
     req.session.token = token;
     console.log(req.session.token,"token from line 79")
-    return res.redirect("http://34.29.19.112/pages/dashboard.html");
+    if (user.role==="admin"){
+      return res.redirect("http://34.29.19.112/pages/dashboard.html");
+    }
+    else{
+      return res.redirect("http://34.29.19.112/pages/student-dashboard.html")
+    }
+    
     // return res.status(200).send({
     //   message: "You've been signed in!",
     // }
