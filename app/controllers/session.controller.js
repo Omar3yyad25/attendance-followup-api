@@ -7,7 +7,7 @@ exports.retriveAll = async (req, res) => {
   const session = await db.session.findAll(
       {
           where: {
-            sessionCode: "ABCDE",
+            sessionCode: "IME4121",
           }
       }
   );
@@ -27,7 +27,7 @@ exports.confirmAttendance = async (req, res) => {
   const session = await db.session.findOne(
       {
           where: {
-            sessionCode: "ABCDE",
+            sessionCode: req.body.sessioncode,
             studentId: req.body.id,
           }
       }
@@ -40,7 +40,7 @@ exports.confirmAttendance = async (req, res) => {
       session.update({
         Attended: "YES",
       });
-      res.status(200).send(session);
+      return res.redirect('http://34.29.19.112/pages/student-dashboard.html');
     }
   }
   catch(error){
